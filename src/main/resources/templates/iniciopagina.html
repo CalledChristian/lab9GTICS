@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class='container'>
+
+
+
+  <br>
+  <div class="mb-3">
+    <h2>Juego de Personajes Movedizos</h2>
+    <br>
+    <form class="form-inline mb-3" method="POST">
+      <label for="numero">Ingrese el numero de personajes</label>
+      <input  type="text" class="form-control" id="numero" />
+      <div class="invalid-feedback" style="display:none;margin-bottom: 10px;">El numero debe ser entre 3 y 5</div>
+      <label for="tamano">Ingrese el tamaño de la pista (m):</label>
+      <input  type="text" class="form-control" id="tamano" />
+      <div class="invalid-feedback" style="display:none;margin-bottom: 10px;">El tamano debe ser entre 4 y 8</div>
+      <button type="submit" class="btn btn-primary">Ingresar Personajes</button>
+    </form>
+  </div>
+
+
+  <div id="robots">
+
+  </div>
+
+  <!--<div class="container mx-auto"  style="width: 400px;">
+    <h1>Consulta de empleado HR</h1>
+    <hr />
+    <form class="form-inline mb-3" id="buscarForm2">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="employeeID" class="sr-only">ID</label>
+        <input type="text" class="form-control" id="employeeID" placeholder="ID">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+    </form>
+    <h2>Resultado</h2>
+    <hr />
+    <form>
+      <div class="form-group row">
+        <label for="first_name" class="col-sm-4 col-form-label">First name</label>
+        <div class="col-sm-8">
+          <input type="text" readonly class="form-control-plaintext" id="first_name" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="last_name" class="col-sm-4 col-form-label">Last name</label>
+        <div class="col-sm-8">
+          <input type="text" readonly class="form-control-plaintext" id="last_name" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-4 col-form-label">Email</label>
+        <div class="col-sm-8">
+          <input type="text" readonly class="form-control-plaintext" id="email" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="salary" class="col-sm-4 col-form-label">Salary</label>
+        <div class="col-sm-8">
+          <input type="text" readonly class="form-control-plaintext" id="salary" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="manager_id" class="col-sm-4 col-form-label">Manager</label>
+        <div class="col-sm-8">
+          <input type="text" readonly class="form-control-plaintext" id="manager_id" value="">
+        </div>
+      </div>
+    </form>
+  </div> -->
+
+</div>
+
+<!--<main>
+  <div class="container px-4 py-5">
+    <form method="post" class="col-4" onsubmit="return validarInicioSesion()">
+
+
+      <div class="mb-3">
+        <input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido"/>
+        <span class="status"></span>
+      </div>
+
+
+
+      <div class="mb-3">
+        <input name="email2" type="text" class="form-control" id="email2" placeholder="Vuelve a ingresar el correo electronico"/>
+      </div>
+
+      <div class="mb-3">
+        <input  name="contrasena" type="text" class="form-control" id="contrasena" placeholder="Password"/>
+        <span class="status"></span>
+      </div>
+
+      <div class="mb-3">
+        <input  name="fechanacimiento" type="date" class="form-control" id="fechanacimiento" placeholder="dd/mm/aaaa"/>
+      </div>
+
+
+      <a th:href="@{'/'}" class="btn btn-danger">Cancelar</a>
+      <button type="submit" class="btn btn-primary">Agregar Cuenta</button>
+    </form>
+  </div>
+
+  <h4>Usuario Agregados: </h4>
+  <br>
+  <br>
+  <div class="container-fluid">
+      <table class="table table-striped">
+          <thead>
+          <tr>
+              <th>#</th>
+              <th>Nombre Completo</th>
+              <th>Email</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Eliminar</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="emp,indice:${listaempleados}">
+              <td th:text="${indice.index + 1}"></td>
+              <td th:text="${emp.getFirst_name()}"></td>
+              <td th:text="${emp.getLast_name()}"></td>
+              <td th:text="${emp.getJob().getJob_title()}"></td>
+              <td th:text="${emp.getDepartamento().getDepartment_name()}"></td>
+              <td th:text="${emp.getDepartamento().getLocation().getCity()}"></td>
+
+              <td><a class="btn btn-danger" th:href="@{'/empleados/borrarempleado' + '?id=' + ${emp.getIdEmpleado()}}">Borrar</a></td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</main> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!--javascript-->
+<script>
+  function validarInicioSesion() {
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var correo = document.getElementById("email").value;
+    var correo2 = document.getElementById("email2").value;
+    var contrasena = document.getElementById("contrasena").value;
+    var fechadenacimiento = document.getElementById("fechanacimiento").value;
+
+    if (nombre == "" || apellido == "" || correo == "" || correo2 == "" || contrasena == "" || fechadenacimiento == "") {
+      alert("Debe llenar todos los Campos")
+      return false;
+    } else if (correo != correo2) {
+      alert("Los correos no son iguales")
+      return false;
+    } else {
+      alert("validacion correcta")
+      return true;
+    }
+
+    /*if(apellido == ""){
+    alert("Campo Faltante")
+}
+
+if(correo == ""){
+    alert("Campo Faltante")
+}
+
+if(correo2 == ""){
+    alert("Campo Faltante")
+} */
+
+
+    /*if( correo == "" || contrasena==""){
+//alert("El correo y contraseña no puden ser nulos")
+    return alert("validacion incorrecta");
+} else{
+    return alert("validacion correcta");
+}
+}*/
+  }
+</script>
+
+<!--Importamos JQUERY-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+
+    //obtener elementos
+
+    //Por ID
+    var elemento1 = $("#texto1");
+    //Por clase (la clase tbm puede tener nombre propio
+    var elemento2 = $(".btn btn-outline-primary mt-4 mb-2 rounded-pill");
+
+    //Simil Para Funciones en JQUERY
+
+
+    //JavaScript
+    /*<button onclick='cambiarTexto()' class="btn btn-outline-primary mt-4 mb-2 rounded-pill">
+        Cambiar Texto 2</button>
+
+    //funcion
+    function cambiarTexto(){
+    document.getElementById("texto1").innerHTML="<h3>Texto de Reemplazo 3</h3>";
+    } */
+
+    //JQUERY
+
+    /*<button id="cambiarTextoBtn" class="btn btn-outline-primary mt-4 mb-2 rounded-pill">
+       Cambiar Texto 3</button>*/
+
+    $("#cambiarTextoBtn").click(function () {
+      $("#texto1").html("<h3>Texto de Reemplazo 4</h3>");
+    });
+
+    /*Ejm2
+    Se tiene un botón que agrega más botones.
+    Y Los nuevos botones van a tener la clase changeBg, para cambiar el fondo.
+     */
+
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    $("#addBtn").click(function () {
+      //cuando se hace click al boton con id="addBtn"
+      //entonces se agregará con "append" un boton de clase "changeBg" para cambiar
+      //el color de fondo de la pagina
+      $("body").append('<button class="changeBg">Cambiar fondo</button>');
+    });
+
+    /*$(".changeBg").click(function () {
+        //cuando se hace en este boton de clase "changeBg" (por eso esta con punto .( ya que # es para ID)
+        //entonces se modificará el color de fondo de la pagina , invocando la funcion que definimos
+        //getRandomcColor() y la funcion "css" que modificará la pagina
+        //el color de fondo de la pagina
+        $("body").css('background-color', getRandomColor());
+    }); */
+
+    /*Pero al dar click a los nuevos botonos para cambiar el color de fondo NO pasa NADA
+    Esto se debe a que los elementos agregados dinámicamente tienen la clase “changeBg” y ésta clase está funcionando con el evento click(),
+    el cual sólo responde a los elementos iniciales del DOM (no a los agregados dinámicamente).
+
+    En caso se requiera manipular elementos agregados dinámicamente al DOM (como el ejemplo),
+    se debe usar la delegación de eventos por medio de la ""función on()"", la cual reconoce a los elementos agregados dinámicamente. */
+
+    $("body").on("click", ".changeBg", function () {
+      //cuando se hace en este boton de clase "changeBg" (por eso esta con punto .( ya que # es para ID)
+      //entonces se modificará el color de fondo de la pagina , invocando la funcion que definimos
+      //getRandomcColor() y la funcion "css" que modificará la pagina
+      //el color de fondo de la pagina
+      $("body").css('background-color', getRandomColor());
+    });
+
+
+    //Validacion de Formularios
+    $("form").submit(function (event) {
+      event.preventDefault();
+      //Para validar usamos la funcion val().
+      var correo = $("#correo").val();
+      var contrasena = $("#contrasena").val();
+
+      if ((correo != "") && (contrasena != "")) {
+        //si no son nulos entonces retonramos
+        return true;
+      } else {
+        //sino , se envia el mensaje de error
+        $(".invalid-feedback").show(500).delay(1000).hide(500);
+      }
+    });
+
+    $('#nombre').keyup(function () {
+      var input = $(this).val();
+      var regex = /^[A-Za-z]+$/; // Expresión regular para letras solamente
+
+      if (input.match(regex)) {
+        $(this).next('.status').html('<img src="check.png"  width="50rem" height="50rem">'); // Mostrar el plugin de check
+      } else {
+        $(this).next('.status').html('<img src="x.png"  width="50rem" height="50rem">'); // Mostrar el plugin de X
+      }
+    });
+
+    $('#apellido').keyup(function () {
+      var input = $(this).val();
+      var regex = /^[A-Za-z]+$/; // Expresión regular para letras solamente
+
+      if (input.match(regex)) {
+        $(this).next('.status').html('<img src="check.png" width="50rem" height="50rem">'); // Mostrar el plugin de check
+      } else {
+        $(this).next('.status').html('<img src="check.png" width="50rem" height="50rem">'); // Mostrar el plugin de check
+      }
+    });
+
+    $('#email').keyup(function () {
+      var input = $(this).val();
+
+      var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+
+      // Verifica si el campo está vacío o si no cumple con el formato de correo
+      if (input.match(regex)) {
+        $(this).next('.status').html('<img src="check.png" width="50rem" height="50rem">'); // Mostrar el plugin de check
+      } else {
+        $(this).next('.status').html('<img src="check.png" width="50rem" height="50rem">'); // Mostrar el plugin de check
+      }
+
+    });
+
+    $('#contrasena').keyup(function () {
+      var password = $(this).val();
+
+      // Expresiones regulares para los requisitos de validación
+      var regexUpperCase = /[A-Z]/;
+      var regexSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+      var regexConsecutiveChars = /(\w)\1/; // Busca caracteres consecutivos
+
+      if (password.length >= 6 && regexUpperCase.test(password) && regexSpecialChar.test(password) && !regexConsecutiveChars.test(password)) {
+        $(this).next('.status').html('<img src="check.png" width="50rem" height="50rem">'); // Mostrar el plugin de check
+      } else {
+        $(this).next('.status').html('<img src="x.png" width="50rem" height="50rem">'); // Mostrar el plugin de X
+      }
+    });
+
+    $("#obtenerespuesta").click(function () {
+      $.ajax({method: "GET", url: "https://3kk521ccj6.execute-api.us-east-1.amazonaws.com/prod/ws-sw2-2020-1-ajax/ej1"})
+              .done(function (msg) {
+                $("#respuesta").html(msg);
+              })
+              .fail(function (err) {
+                console.log(err)
+                alert("ocurrió un error en la pagina");
+              })
+    });
+
+    $("button").click(function () {
+      $.ajax({
+        method: "POST",
+        data: {username: $("#username").val()},
+        url: "https://1a8jit3xd4.execute-api.us-east-1.amazonaws.com/prod?accion=validar"
+      })
+              .done(function (msg) {
+                if (msg == "no existe") {
+                  $(".info").text("Nombre de Usuario Disponible")
+                } else {
+                  $(".info").text("Nombre de Usuario Ya Existe")
+                }
+                $(".info").show()
+                $(".info").delay(3000).fadeOut()
+              })
+              .fail(function (err) {
+                console.log(err)
+                alert("ocurrió un error en la pagina");
+              })
+    });
+
+    /*$("#buscarForm").submit(function () {
+      var employeeId = $("#employeeID").val();
+      $.ajax({
+        method: "POST",
+        data: {id: employeeId},
+        dataType: "json",
+        url: "https://cxidau9ao4.execute-api.us-east-1.amazonaws.com/prod"
+      }).done(function (data) {
+        if (data.estado === "ok") {
+          $("#first_name").val(data.empleado.first_name);
+          $("#last_name").val(data.empleado.last_name);
+          $("#email").val(data.empleado.email);
+          $("#salary").val(data.empleado.salary);
+          if (data.empleado.manager_id != 0) {
+            $("#manager_id").val(data.empleado.manager_id);
+          } else {
+            $("#manager_id").val("sin jefe");
+          }
+        } else {
+          console.log(data.msg);
+          alert(data.msg);
+        }
+      }).fail(function (err) {
+        var jsonData = err.responseJSON;
+        console.log(jsonData.msg);
+        alert(jsonData.msg);
+      });
+      return false;
+    });*/
+
+    $("form").submit(function (event) {
+      event.preventDefault();
+      //Para validar usamos la funcion val().
+      var numero = $("#numero").val();
+      var tamano = $("#tamano").val();
+
+      if ((numero >= 3 && numero <= 5) && (tamano >= 4 && tamano <= 8)) {
+        alert("llenado correcto")
+
+        for (i = 0; i < numero; i++) {
+
+          $("#robots").append('<div id="carta" class="card" style="width: 18rem;">\n' +
+                '  <img class="card-img-top" src="robot.png" alt="Card image cap">\n' +
+                '  <div class="card-body" style="background-color:cornflowerblue">\n' +
+                '  <input  type="text" class="form-control" id="tamano" >\n' +
+                '  <br> \n' +
+                  '  <a href="#" class="btn btn-success">Seleccionar Personaje</a>\n' +
+                  '  <button id="changeBg">Cambiar fondo</button>\n' +
+                '  </div>\n' +
+                '</div>\n' +
+          '  <a href="#" class="btn btn-primary">Iniciar Juego</a>\n'
+          ); // Mostrar el plugin de check
+
+          function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+          }
+
+          $("#changeBg").click(function () {
+            //cuando se hace en este boton de clase "changeBg" (por eso esta con punto .( ya que # es para ID)
+            //entonces se modificará el color de fondo de la pagina , invocando la funcion que definimos
+            //getRandomcColor() y la funcion "css" que modificará la pagina
+            //el color de fondo de la pagina
+            $("#carta").css('background-color', getRandomColor());
+          });
+      }
+
+
+        return true;
+
+      } else if (numero < 3 || numero > 5) {
+        $(".invalid-feedback").show(500).delay(1000).hide(500);
+        return false;
+      } else if (tamano < 4 || numero > 8) {
+        $(".invalid-feedback").show(500).delay(1000).hide(500);
+        return false;
+      } else if (numero == "" || tamano == "") {
+        $(".invalid-feedback").show(500).delay(1000).hide(500);
+        return false;
+      }
+
+    });
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    $("#changeBg").click(function () {
+      //cuando se hace en este boton de clase "changeBg" (por eso esta con punto .( ya que # es para ID)
+      //entonces se modificará el color de fondo de la pagina , invocando la funcion que definimos
+      //getRandomcColor() y la funcion "css" que modificará la pagina
+      //el color de fondo de la pagina
+      $("#carta").css('background-color', getRandomColor());
+    });
+
+  });
+</script>
+</body>
+</html>
